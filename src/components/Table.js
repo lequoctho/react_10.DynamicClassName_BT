@@ -1,45 +1,36 @@
 import React, {Component} from 'react';
 import './Table.css'
 
-class TodoItem extends Component {
+class Table extends Component {
     
     render() {
-        //const { item } = this.props;
-        let className = 'item';
-        // if (item.isComplete) {
-        //     className += ' TodoItem-complete';
-        // }
+        const { items } = this.props;
+        let className = '';
+        
         return <div class="table">
-                <div className={className}>
-                  <table>
-                    <tr>
-                      <th>#</th>
-                      <th>Fisrt</th>
-                      <th>Last</th>
-                      <th>Handle</th>
+                <table>
+                  <tr>
+                    <th>#</th>
+                    <th>Fisrt</th>
+                    <th>Last</th>
+                    <th>Handle</th>
+                  </tr>
+                  items.map((item, key) => {
+                    // if (item.id % 2 === 0) {
+                    //   className += 'item-even';
+                    // }
+                   
+                    <tr className={className}>
+                      <td>item.id</td>
+                      <td>item.first</td>
+                      <td>item.last</td>
+                      <td>item.handle</td>
                     </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                  </table>
-                </div>
+                  })
+                  
+                </table>
             </div>;
     }
 }
 
-export default TodoItem;
+export default Table;

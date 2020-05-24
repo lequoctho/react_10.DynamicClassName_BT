@@ -7,16 +7,16 @@ class App extends Component {
   constructor(){
     super();
     this.items = [
-      {id: 1, first:'Mark', last: true},
-      {title:'Đi đá bóng', isComplete: true},
-      {title:'Đi đổ xăng', isComplete: false}
+      {id: 1, first:'Mark', last: 'Otto', handle: '@mdo'},
+      {id: 2, first:'Jacob', last: 'Thornton', handle: '@fat'},
+      {id: 3, first:'Mark', last: 'Otto', handle: '@mdo'}
     ];
   }
   
   render() {
     return (
       <div className="App">
-        <Table/>
+        <Table item={this.items}/>
       </div>
     );
   }
