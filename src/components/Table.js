@@ -5,26 +5,39 @@ class TodoItem extends Component {
     
     render() {
         //const { item } = this.props;
-        let className = 'TodoItem';
+        let className = 'item';
         // if (item.isComplete) {
         //     className += ' TodoItem-complete';
         // }
         return <div class="table">
                 <div className={className}>
-                  <tr>
-                    <th>#</th>
-                    <th>Fisrt</th>
-                    <th>Last</th>
-                    <th>Handle</th>
-                  </tr>
-                  <tr>
-                    
-                  </tr>
-                  <td>
-                    <tr>1</tr>
-                  </td>
+                  <table>
+                    <tr>
+                      <th>#</th>
+                      <th>Fisrt</th>
+                      <th>Last</th>
+                      <th>Handle</th>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </table>
                 </div>
-                
             </div>;
     }
 }
