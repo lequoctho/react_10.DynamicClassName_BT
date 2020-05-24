@@ -1,11 +1,18 @@
 import React, {Component} from 'react';
 import './Table.css'
+import Row from './Row.js'
 
 class Table extends Component {
+    constructor(){
+      super();
+      this.items = [
+        {id: 1, first:'Mark', last: 'Otto', handle: '@mdo'},
+        {id: 2, first:'Jacob', last: 'Thornton', handle: '@fat'},
+        {id: 3, first:'Mark', last: 'Otto', handle: '@mdo'}
+      ];
+    }
     
     render() {
-        const { items } = this.props;
-        let className = '';
         
         return <div class="table">
                 <table>
@@ -15,19 +22,11 @@ class Table extends Component {
                     <th>Last</th>
                     <th>Handle</th>
                   </tr>
-                  items.map((item, key) => {
-                    // if (item.id % 2 === 0) {
-                    //   className += 'item-even';
-                    // }
-                   
-                    <tr className={className}>
-                      <td>item.id</td>
-                      <td>item.first</td>
-                      <td>item.last</td>
-                      <td>item.handle</td>
-                    </tr>
-                  })
-                  
+                  <div>
+                    {
+                      this.items.map((item, key) => <Row item={item} key={item.id}/> )
+                    }
+                  </div>
                 </table>
             </div>;
     }
